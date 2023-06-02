@@ -1,0 +1,6 @@
+create database billing;
+use billing;
+create table bill(meter_number varchar(20) not null, month varchar(200) not null,units int not null, amount int);
+create table customer_info(name varchar(20), meter_number varchar(20) not null,address varchar(20),state varchar(20), city varchar(20), email varchar(20), phone varchar(10));
+create table tax(meter_location varchar(20),meter_type varchar(20), phase_code int, bill_type varchar(20),days int,meter_rent int, service_rent int, gst int, mcb_rent int);
+create table logindata(id int primary key not null, username varchar(50) not null, password varchar(50) not null);
